@@ -1,0 +1,23 @@
+{
+  "name": "project4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shnarch1/Project4.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shnarch1/Project4/issues"
+  },
+  "homepage": "https://github.com/shnarch1/Project4#readme",
+  "dependencies": {
+    "expressjs": "^1.0.1",
+    "mongoose": "^4.11.12"
+  }
+}
