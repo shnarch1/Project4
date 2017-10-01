@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/shnarch1/Project4#readme",
   "dependencies": {
-    "expressjs": "^1.0.1",
+    "express": "^4.16.1",
     "mongoose": "^4.11.12"
   }
 }
