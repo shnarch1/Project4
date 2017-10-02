@@ -14,7 +14,9 @@ mongoose.connection.on('open', function() {
 	var js = new Course({name: 'Java Script',
 							 description: 'Java Script Descritopn',
 							 image_url: 'public/images/js.png'});
-	js.save();
+	js.save().then((err, course) => {
+		if !err console.log("saved!" + course);
+	});
 
 	Course.find({}, function(err, courses){
 		console.log(courses.length);
