@@ -2,18 +2,22 @@ const express = require('express')
 const mongoose = require('mongoose');
 
 const multer = require('multer');
-const upload = multer({dest: 'public/images'});
+const courses_upload = multer({dest: 'public/images/courses'});
+const students_upload = multer({dest: 'public/images/students'});
 
 const courses = require('./app/controllers/courses')
+const students = require('./app/controllers/students')
 
 const app = express()
 
 //Routes
 app.get('/course', courses.getAll);
 app.get('/course/:id', courses.getById);
-app.post('/course', upload.single('course_image'), courses.addCourse);
-app.post('/course/:id', upload.single('course_image'), courses.updateCourse);
+app.post('/course', courses_upload.single('course_image'), courses.addCourse);
+app.post('/course/:id', courses_upload.single('course_image'), courses.updateCourse);
 app.delete('/course/:id', courses.deleteCourse);
+
+app.post('/student', students_upload.single('student_image'), students.addStudent);
 
 connect_mongo()
 	.on('error', console.log)

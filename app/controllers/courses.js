@@ -21,7 +21,7 @@ exports.getById = function(req, res){
 exports.addCourse = function(req, res){
 	var new_course = new Course(req.body);
 	if( typeof req.file == 'undefined' ) {
-		new_course.image_url = "public/images/default.png";
+		new_course.image_url = "public/images/courses/default.png";
 	}
 	else new_course.image_url = req.file.path;
 	
