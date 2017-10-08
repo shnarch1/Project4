@@ -17,7 +17,10 @@ app.post('/course', courses_upload.single('course_image'), courses.addCourse);
 app.post('/course/:id', courses_upload.single('course_image'), courses.updateCourse);
 app.delete('/course/:id', courses.deleteCourse);
 
+app.get('/student/:id', students.getById);
 app.post('/student', students_upload.single('student_image'), students.addStudent);
+app.post('/student/:id', students_upload.single('student_image'), students.updateStudent);
+app.delete('/student/:id', students.deleteStudent);
 
 connect_mongo()
 	.on('error', console.log)

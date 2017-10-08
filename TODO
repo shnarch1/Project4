@@ -1,2 +1,7 @@
 * express and mongoose error handling (status codes)
 * config file
+* Adding validator for the existance of an object-id (create student, update student, update course):
+	https://stackoverflow.com/questions/18516610/	does-mongoose-actually-validate-the-existence-of-an-object-id
+
+*Deletion of an document should delete all its references from all the docs
+* delete old photo on image update

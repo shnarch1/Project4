@@ -58,7 +58,8 @@ exports.updateCourse = function(req, res){
 		}
 		course_to_update.name = req.body.name || course_to_update.name;
 		course_to_update.description = req.body.description || course_to_update.description;
-		course_to_update.image_url = req.body.image_url || course_to_update.image_url;
+		// course_to_update.image_url = req.file.path || course_to_update.image_url;
+		course_to_update.image_url = (typeof req.file == 'undefined') ? course_to_update.image_url : req.file.path
 		course_to_update.save()
 						.then((course) => {
 								res.send(course);
